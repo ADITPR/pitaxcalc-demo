@@ -165,5 +165,10 @@
         "out_of_range_minmsg": "",
         "out_of_range_maxmsg": "",
         "out_of_range_action": "stop"
-    }
-}
+    },
+    "_rebate": {
+          resident TTI <=500000
+          10% of income ceiling 5000
+          rebate<= tax
+
+          
