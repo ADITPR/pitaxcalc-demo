@@ -87,10 +87,10 @@ def pit_liability(calc):
     tbrk3 = calc.policy_param('tbrk3')
     tbrk4 = calc.policy_param('tbrk4')
     grosstax = (rate1 * np.minimum(taxinc, tbrk1) +
-           rate2 * np.minimum(tbrk2 - tbrk1,
-                              np.maximum(0., taxinc - tbrk1)) +
-           rate3 * np.minimum(tbrk3 - tbrk2,
-                              np.maximum(0., taxinc - tbrk2)) +
-           rate4 * np.maximum(0., taxinc - tbrk3))
-           net_tax=(grosstax-rebate)
+                rate2 * np.minimum(tbrk2 - tbrk1,
+                                   np.maximum(0., taxinc - tbrk1)) +
+                rate3 * np.minimum(tbrk3 - tbrk2,
+                                   np.maximum(0., taxinc - tbrk2)) +
+                rate4 * np.maximum(0., taxinc - tbrk3))
+    net_tax = (grosstax - rebate)
     calc.array('pitax', tax)
